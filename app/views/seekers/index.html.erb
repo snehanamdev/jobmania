@@ -1,0 +1,20 @@
+ <h3 class="heading pt-lg-5">Job List</h3>
+  <br>     
+<table class="table table-striped">
+  <tr>
+    <th>S.No.</th>
+    <th>Profile</th>
+    <th>Location</th>
+    <th></th>
+  </tr>
+  <% @i = 1 %>
+  <% @jobs.each do |j| %>
+    <tr>
+      <td><%= @i %></td>
+      <td><%= j.profile %></td>
+      <td><%= j.location %></td>
+      <td><%= link_to 'Read More', seeker_path(j) %>
+    </tr>
+    <% @i = @i+1 %>
+  <% end %>
+</table>

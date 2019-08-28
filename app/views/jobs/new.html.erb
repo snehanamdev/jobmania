@@ -1,0 +1,30 @@
+<%#= form_with scope: :job, location: job_path, local: true do |f| %>  
+<%= form_for(@job) do |f| %>
+  <br>
+  <br>
+  <div class="field">
+    <%= f.label :Profile %><br />
+    <%= f.text_field :profile, autofocus: true, autocomplete: "profile" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :Description %><br />
+    <%= f.text_area :description, autofocus: true, autocomplete: "description" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :Salary %><br />
+    <%= f.text_field :salary, autofocus: true, autocomplete: "salary" %>
+  </div>
+  <br>
+   <div class="field">
+    <%= f.label :Location %><br />
+    <%= f.text_field :location, autofocus: true, autocomplete: "location" %>
+  </div>
+  <br>
+
+  <div class="actions ">
+    <%= f.submit "Add Job" %>
+  </div>
+<% end %><br>
+<%= link_to 'Back', jobs_path %>

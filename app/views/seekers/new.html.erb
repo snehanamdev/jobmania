@@ -1,0 +1,34 @@
+<%= form_for(@seeker) do |f| %>
+  <br>
+  <div class="field">
+    <%= f.label :Full_Name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :Mobile %><br />
+    <%= f.text_field :mobile, autofocus: true, autocomplete: "mobile" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :Gender %><br />
+    <%= f.text_field :gender, autofocus: true, autocomplete: "gender" %>
+  </div>
+  <br>
+   <div class="field">
+    <%= f.label :DOB %><br />
+    <%= f.date_field :dob, autofocus: true, autocomplete: "dob" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :Address %><br />
+    <%= f.text_field :address, autofocus: true, autocomplete: "address" %>
+  </div>
+  <br>
+  <div class="actions ">
+    <%= f.submit "Add Detail" %>
+  </div>
+<br>
+<%= link_to 'Back', seekers_path %>&nbsp;&nbsp;&nbsp;
+<%= link_to 'Edit Detail', edit_seeker_path(current_user, f) %>
+<% end %>

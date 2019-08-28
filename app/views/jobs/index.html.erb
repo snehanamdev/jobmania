@@ -1,0 +1,27 @@
+ <h3 class="heading pt-lg-5">Job List</h3>
+  <br>     
+<table class="table table-striped">
+  <tr>
+    <th>S.No.</th>
+    <th>Profile</th>
+    <th>Description</th>
+    <th>Salary</th>
+    <th>Location</th>
+    <th>Action</th>
+  </tr>
+  <% @i = 1 %>
+  <% @jobs.each do |j| %>
+    <tr>
+      <td><%= @i %></td>
+      <td><%= j.profile %></td>
+      <td><%= j.description %></td>
+      <td><%= j.salary %></td>
+      <td><%= j.location %></td>
+      <td><%= link_to 'Show', job_path(j) %> |
+      <%= link_to 'Edit', edit_job_path(j) %> |
+      <%= link_to 'Destroy', job_path(j), method: :delete, 
+      data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% @i = @i+1 %>
+  <% end %>
+</table>

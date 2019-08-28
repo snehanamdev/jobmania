@@ -1,0 +1,35 @@
+ <br><br>
+<%= form_for(@seeker) do |form| %>
+ 
+  <p>
+    <%= form.label :Full_name %><br>
+    <%= form.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= form.label :Mobile %><br>
+    <%= form.text_field :mobile %>
+  </p>
+ 
+  <p>
+    <%= form.label :Gender %><br>
+    <%= form.text_field :gender %>
+  </p>
+ 
+  <p>
+    <%= form.label :DOB %><br>
+    <%= form.date_field :dob %>
+  </p>
+
+  <p>
+    <%= form.label :Address %><br>
+    <%= form.text_field :address %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', seekers_path %>

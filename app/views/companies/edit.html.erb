@@ -1,0 +1,29 @@
+<%= form_for(@company) do |f| %>  <br>
+  <br>
+  <div class="field">
+    <%= f.label :Company_Name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :Mobile %><br />
+    <%= f.text_field :mobile, autofocus: true, autocomplete: "mobile" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :Address %><br />
+    <%= f.text_field :address, autofocus: true, autocomplete: "address" %>
+  </div>
+  <br>
+   <div class="field">
+    <%= f.label :Website_URL %><br />
+    <%= f.text_field :url, autofocus: true, autocomplete: "url" %>
+  </div>
+  <br>
+
+  <div class="actions ">
+    <%= f.submit "Edit Details" %>
+  </div>
+<% end %><br>
+<%= link_to 'Back', jobs_path %>
+
